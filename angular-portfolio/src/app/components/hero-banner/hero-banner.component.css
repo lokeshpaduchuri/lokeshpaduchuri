@@ -1,0 +1,11 @@
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+.animate {
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

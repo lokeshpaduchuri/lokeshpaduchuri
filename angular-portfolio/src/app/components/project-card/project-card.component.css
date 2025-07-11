@@ -1,0 +1,11 @@
+.project-card {
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+}
+.project-card img {
+  max-width: 100%;
+  height: auto;
+}
