@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Build output
+/dist/
+/tmp/
+/out-tsc/
+
+# Angular cache
+/.angular/
+.angular/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.*
+
+# IDE directories and project files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
