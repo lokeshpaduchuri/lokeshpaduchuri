@@ -7,6 +7,7 @@ import { ProjectCardComponent } from '../components/project-card/project-card.co
 import { BlogCardComponent } from '../components/blog-card/blog-card.component';
 import { ContactCtaComponent } from '../components/contact-cta/contact-cta.component';
 import { ThemeToggleComponent } from '../layout/theme-toggle/theme-toggle.component';
+import { NavbarComponent } from '../layout/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ThemeToggleComponent } from '../layout/theme-toggle/theme-toggle.compon
     ProjectCardComponent,
     BlogCardComponent,
     ContactCtaComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    NavbarComponent
   ],
   imports: [CommonModule],
   exports: [
@@ -24,7 +26,8 @@ import { ThemeToggleComponent } from '../layout/theme-toggle/theme-toggle.compon
     ProjectCardComponent,
     BlogCardComponent,
     ContactCtaComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    NavbarComponent
   ]
 })
 export class SharedModule {}
