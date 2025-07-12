@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "portfolio": {
+      "architect": {
+        "build": {
+          "options": {
+            "polyfills": "src/polyfills.ts"
+          }
+        },
+        "test": {
+          "options": {
+            "polyfills": "src/polyfills.ts"
+          }
+        }
+      }
+    }
+  }
+}
