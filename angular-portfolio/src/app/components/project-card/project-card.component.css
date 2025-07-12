@@ -4,6 +4,10 @@
   border-radius: 4px;
   background: #222;
   color: #fff;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
 }
 .project-card img {
   max-width: 100%;

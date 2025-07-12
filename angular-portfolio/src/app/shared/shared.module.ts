@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from "@angular/router";
 
 import { HeroBannerComponent } from '../components/hero-banner/hero-banner.component';
 import { TechStackComponent } from '../components/tech-stack/tech-stack.component';
@@ -7,6 +8,7 @@ import { ProjectCardComponent } from '../components/project-card/project-card.co
 import { BlogCardComponent } from '../components/blog-card/blog-card.component';
 import { ContactCtaComponent } from '../components/contact-cta/contact-cta.component';
 import { ThemeToggleComponent } from '../layout/theme-toggle/theme-toggle.component';
+import { NavbarComponent } from '../layout/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,16 +17,19 @@ import { ThemeToggleComponent } from '../layout/theme-toggle/theme-toggle.compon
     ProjectCardComponent,
     BlogCardComponent,
     ContactCtaComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    NavbarComponent
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [
     HeroBannerComponent,
     TechStackComponent,
     ProjectCardComponent,
     BlogCardComponent,
     ContactCtaComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    NavbarComponent,
+    RouterModule,
   ]
 })
 export class SharedModule {}
