@@ -2,6 +2,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  animation: fadeIn 0.6s ease both;
 
   &__form {
     display: flex;
@@ -25,5 +26,22 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  &__intro {
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-align: center;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

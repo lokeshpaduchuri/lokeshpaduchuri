@@ -9,7 +9,8 @@ interface Post {
 
 @Component({
   selector: 'app-blog-page',
-  templateUrl: './blog.component.html'
+  templateUrl: './blog.component.html',
+  styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
   posts: Post[] = [];
