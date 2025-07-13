@@ -1,4 +1,18 @@
-<section class="contact-page">
-  <h2>Contact</h2>
-  <p>Please reach me at <a href="mailto:example@example.com">example@example.com</a></p>
+<section class="contact-page card">
+  <h2 class="contact-page__title">Contact Me</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="submit()" class="contact-page__form">
+    <label>
+      <span>Name</span>
+      <input formControlName="name" required />
+    </label>
+    <label>
+      <span>Email</span>
+      <input formControlName="email" type="email" required />
+    </label>
+    <label>
+      <span>Message</span>
+      <textarea formControlName="message" rows="5" required></textarea>
+    </label>
+    <button type="submit" class="contact-page__btn">Send</button>
+  </form>
 </section>

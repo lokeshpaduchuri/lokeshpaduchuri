@@ -17,6 +17,9 @@
   }
 
   &__nav {
+    margin-left: auto;
+    margin-right: 1rem;
+
     ul {
       list-style: none;
       display: flex;
@@ -37,6 +40,6 @@
   }
 
   app-theme-toggle {
-    margin-left: auto;
+    margin: 0;
   }
 }

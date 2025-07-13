@@ -1,12 +1,23 @@
 <main class="home">
   <app-hero-banner></app-hero-banner>
-  <app-tech-stack></app-tech-stack>
+  <section class="home__stack card">
+    <app-tech-stack></app-tech-stack>
+  </section>
   <section class="home__projects card">
-    <app-project-card></app-project-card>
+    <app-project-card
+      [title]="project?.title"
+      [description]="project?.description"
+      [image]="project?.image"
+      [link]="project?.link"
+    ></app-project-card>
     <a routerLink="/projects" class="home__link">View All Projects</a>
   </section>
   <section class="home__blog card">
-    <app-blog-card></app-blog-card>
+    <app-blog-card
+      [title]="post?.title"
+      [excerpt]="post?.excerpt"
+      [link]="post?.link"
+    ></app-blog-card>
   </section>
   <app-contact-cta></app-contact-cta>
 </main>
