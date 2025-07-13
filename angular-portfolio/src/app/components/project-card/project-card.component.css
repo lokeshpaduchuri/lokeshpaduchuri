@@ -1,15 +1,1 @@
-.project-card {
-  border: 1px solid #444;
-  padding: 1rem;
-  border-radius: 4px;
-  background: #222;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-.project-card:hover {
-  transform: translateY(-4px);
-}
-.project-card img {
-  max-width: 100%;
-  height: auto;
-}
+/* Tailwind classes handle styling for project cards. */
