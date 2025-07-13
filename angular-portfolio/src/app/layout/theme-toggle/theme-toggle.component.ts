@@ -3,7 +3,7 @@ import { Component, Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
-  styleUrls: ['./theme-toggle.component.css']
+  styleUrls: ['./theme-toggle.component.scss']
 })
 export class ThemeToggleComponent {
   constructor(private renderer: Renderer2) {}

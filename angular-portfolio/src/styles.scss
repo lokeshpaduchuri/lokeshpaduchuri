@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #3b82f6; /* electric blue */
+  --nav-bg: #1f1f1f; /* dark gray */
+  --nav-text: #f5f5f5; /* soft white */
+  --bg-color: #2a2a2a; /* slate */
+  --card-bg: #333; /* darker card */
+  --text-color: #f5f5f5;
+  --heading-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --nav-bg: #ffffff;
+  --nav-text: #1f1f1f;
+  --bg-color: #f5f5f5;
+  --card-bg: #e5e5e5;
+  --text-color: #1f1f1f;
+  --heading-color: #1f1f1f;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}

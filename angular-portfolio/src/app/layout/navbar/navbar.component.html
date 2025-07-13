@@ -1,8 +1,13 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <a routerLink="/" class="logo">My Portfolio</a>
-  <ul class="nav-links">
-    <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
-  </ul>
-</nav>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a routerLink="/" class="site-header__logo">My Portfolio</a>
+    <nav class="site-header__nav" aria-label="Main navigation">
+      <ul class="site-header__links">
+        <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+      </ul>
+    </nav>
+    <app-theme-toggle></app-theme-toggle>
+  </div>
+</header>
