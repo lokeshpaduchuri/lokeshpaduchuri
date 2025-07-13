@@ -3,6 +3,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
 .cta {
@@ -12,4 +13,9 @@ main {
   color: #fff;
   border-radius: 4px;
   text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cta:hover {
+  background-color: #0b5ed7;
 }
