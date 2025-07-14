@@ -1,5 +1,19 @@
-<article class="blog-card">
-  <h3 class="blog-card__title">{{ title }}</h3>
-  <p class="blog-card__excerpt">{{ excerpt }}</p>
-  <a [routerLink]="link" class="blog-card__link">Read More</a>
+<article
+  class="relative overflow-hidden rounded-lg bg-white dark:bg-gray-800 p-6 transition-transform duration-200 hover:scale-[1.015] hover:shadow-xl before:content-[''] before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-transparent before:via-white/40 before:to-transparent before:opacity-0 before:transition-opacity before:duration-500 before:delay-75 hover:before:opacity-100"
+>
+  <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+    {{ blog.title }}
+  </h3>
+  <p class="text-gray-700 dark:text-gray-300 mb-4">{{ blog.summary }}</p>
+  <button
+    class="px-3 py-1 rounded bg-emerald-600 dark:bg-emerald-500 text-white hover:bg-emerald-700 dark:hover:bg-emerald-600 transition-colors"
+    (click)="openModal()"
+  >
+    Read More
+  </button>
+  <app-blog-modal
+    *ngIf="showModal"
+    [blog]="blog"
+    (close)="closeModal()"
+  ></app-blog-modal>
 </article>

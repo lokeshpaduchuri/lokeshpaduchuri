@@ -1,17 +1,20 @@
 [
   {
     "title": "Why I Love Angular",
-    "excerpt": "A quick look at what makes Angular a great framework.",
-    "link": "/blog/why-angular"
+    "summary": "A quick look at what makes Angular a great framework.",
+    "content": "Angular offers a robust framework with powerful tooling and a vibrant community. This post dives into the features that keep me coming back.",
+    "date": "2024-05-01"
   },
   {
     "title": "SCSS Tips",
-    "excerpt": "Organizing your styles with BEM and variables.",
-    "link": "/blog/scss-tips"
+    "summary": "Organizing your styles with BEM and variables.",
+    "content": "Learn how to structure your SCSS for maintainability using the BEM methodology and variables for reusable values.",
+    "date": "2024-06-15"
   },
   {
     "title": "Deploying to the Cloud",
-    "excerpt": "How to get your Angular app online quickly.",
-    "link": "/blog/deploying-cloud"
+    "summary": "How to get your Angular app online quickly.",
+    "content": "From choosing a cloud provider to automating your CI/CD pipeline, this article covers the essentials of cloud deployment.",
+    "date": "2024-07-20"
   }
 ]

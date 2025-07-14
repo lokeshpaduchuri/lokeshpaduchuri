@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
+import { Blog } from '../blog/blog.model';
 
 interface Project {
   title: string;
@@ -8,11 +9,6 @@ interface Project {
   link: string;
 }
 
-interface Post {
-  title: string;
-  excerpt: string;
-  link: string;
-}
 
 @Component({
   selector: 'app-home',
@@ -21,7 +17,7 @@ interface Post {
 })
 export class HomeComponent implements OnInit {
   project?: Project;
-  post?: Post;
+  post?: Blog;
 
   constructor(private data: DataService) {}
 

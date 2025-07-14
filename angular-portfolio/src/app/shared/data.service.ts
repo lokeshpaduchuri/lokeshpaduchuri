@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Blog } from '../blog/blog.model';
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
@@ -10,7 +11,7 @@ export class DataService {
     return this.http.get<any[]>('assets/projects.json');
   }
 
-  getPosts(): Observable<any[]> {
-    return this.http.get<any[]>('assets/blog.json');
+  getPosts(): Observable<Blog[]> {
+    return this.http.get<Blog[]>('assets/blog.json');
   }
 }

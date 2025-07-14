@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
-
-interface Post {
-  title: string;
-  excerpt: string;
-  link: string;
-}
+import { Blog } from './blog.model';
 
 @Component({
   selector: 'app-blog-page',
@@ -13,7 +8,7 @@ interface Post {
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  posts: Post[] = [];
+  posts: Blog[] = [];
 
   constructor(private data: DataService) {}
 

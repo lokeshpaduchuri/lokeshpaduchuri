@@ -13,11 +13,7 @@
     <a routerLink="/projects" class="home__link">View All Projects</a>
   </section>
   <section class="home__blog card">
-    <app-blog-card
-      [title]="post?.title"
-      [excerpt]="post?.excerpt"
-      [link]="post?.link"
-    ></app-blog-card>
+    <app-blog-card [blog]="post"></app-blog-card>
   </section>
   <app-contact-cta></app-contact-cta>
 </main>

@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
+import { Blog } from '../../blog/blog.model';
 
 @Component({
   selector: 'app-blog-card',
@@ -6,7 +7,27 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./blog-card.component.scss']
 })
 export class BlogCardComponent {
-  @Input() title = 'Why I Love Angular';
-  @Input() excerpt = 'Short summary of the post.';
-  @Input() link = '/blog/post-1';
+  /** Blog data for the card */
+  @Input() blog!: Blog;
+
+  /** Controls modal visibility */
+  showModal = false;
+
+  /** Open the modal */
+  openModal(): void {
+    this.showModal = true;
+  }
+
+  /** Close the modal */
+  closeModal(): void {
+    this.showModal = false;
+  }
+
+  /** Close modal when ESC is pressed */
+  @HostListener('document:keydown.escape')
+  onEsc(): void {
+    if (this.showModal) {
+      this.closeModal();
+    }
+  }
 }
