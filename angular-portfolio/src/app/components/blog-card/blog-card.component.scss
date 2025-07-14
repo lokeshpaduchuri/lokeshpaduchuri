@@ -1,0 +1,27 @@
+.blog-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+  &__title {
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  &__excerpt {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--primary-hover);
+    }
+  }
+}

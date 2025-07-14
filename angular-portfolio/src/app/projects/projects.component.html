@@ -1,4 +1,10 @@
 <section class="projects-page">
-  <h2>Projects</h2>
-  <app-project-card></app-project-card>
+  <h2 class="projects-page__title">Projects</h2>
+  <app-project-card
+    *ngFor="let p of projects"
+    [title]="p.title"
+    [description]="p.description"
+    [image]="p.image"
+    [link]="p.link"
+  ></app-project-card>
 </section>

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "My Web App",
+    "description": "A modern web application built with Angular.",
+    "image": "assets/placeholder.svg",
+    "link": "/projects/my-web-app"
+  },
+  {
+    "title": "Portfolio Site",
+    "description": "Personal branding website built with SCSS styling.",
+    "image": "assets/placeholder.svg",
+    "link": "/projects/portfolio-site"
+  },
+  {
+    "title": "E-commerce Platform",
+    "description": "Full-featured online store with payment integration.",
+    "image": "assets/placeholder.svg",
+    "link": "/projects/e-commerce"
+  }
+]

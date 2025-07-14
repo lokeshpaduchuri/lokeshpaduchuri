@@ -1,0 +1,17 @@
+.contact-cta {
+  text-align: center;
+  padding: 2rem 0;
+
+  &__btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+
+    &:hover {
+      background: var(--primary-hover);
+    }
+  }
+}

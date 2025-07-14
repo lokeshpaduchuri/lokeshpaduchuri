@@ -1,12 +1,23 @@
-<main class="flex flex-col items-center gap-8 p-4">
+<main class="home">
   <app-hero-banner></app-hero-banner>
-  <app-tech-stack></app-tech-stack>
-  <section class="projects w-full flex flex-col items-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6 rounded-lg">
-    <app-project-card></app-project-card>
-    <a routerLink="/projects" class="cta mt-4">View All Projects</a>
+  <section class="home__stack card">
+    <app-tech-stack></app-tech-stack>
   </section>
-  <section class="blog w-full flex justify-center bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-6 rounded-lg">
-    <app-blog-card></app-blog-card>
+  <section class="home__projects card">
+    <app-project-card
+      [title]="project?.title"
+      [description]="project?.description"
+      [image]="project?.image"
+      [link]="project?.link"
+    ></app-project-card>
+    <a routerLink="/projects" class="home__link">View All Projects</a>
+  </section>
+  <section class="home__blog card">
+    <app-blog-card
+      [title]="post?.title"
+      [excerpt]="post?.excerpt"
+      [link]="post?.link"
+    ></app-blog-card>
   </section>
   <app-contact-cta></app-contact-cta>
 </main>

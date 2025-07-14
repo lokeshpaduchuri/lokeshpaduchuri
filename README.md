@@ -4,4 +4,4 @@
 
 ## Development
 
-This project now integrates **Tailwind CSS** for styling. After cloning, run `npm install` inside `angular-portfolio` to install dependencies, then `npm start` to serve the site.
+This project now uses **SCSS modules** for styling. After cloning, run `npm install` inside `angular-portfolio` to install dependencies, then `npm start` to serve the site.

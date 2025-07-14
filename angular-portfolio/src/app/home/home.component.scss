@@ -1,0 +1,29 @@
+.home {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  &__stack,
+  &__projects,
+  &__blog {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+
+    &:hover {
+      background-color: var(--primary-hover);
+    }
+  }
+}
