@@ -1,5 +1,5 @@
-<article class="blog-card">
-  <h3 class="blog-card__title">{{ title }}</h3>
-  <p class="blog-card__excerpt">{{ excerpt }}</p>
-  <a [routerLink]="link" class="blog-card__link">Read More</a>
-</article>
+<div (click)="openModal()" class="blog-card group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <h3 class="blog-card__title text-xl font-semibold">{{ blog.title }}</h3>
+  <p class="blog-card__excerpt text-sm text-gray-300">{{ blog.summary }}</p>
+  <button class="blog-card__link text-green-400 hover:underline" (click)="openModal($event)">Read More</button>
+</div>

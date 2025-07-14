@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BlogModalComponent, BlogData } from '../blog-modal/blog-modal.component';
 
 @Component({
   selector: 'app-blog-card',
@@ -6,7 +8,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./blog-card.component.scss']
 })
 export class BlogCardComponent {
-  @Input() title = 'Why I Love Angular';
-  @Input() excerpt = 'Short summary of the post.';
-  @Input() link = '/blog/post-1';
+  @Input() blog!: BlogData;
+
+  constructor(private dialog: MatDialog) {}
+
+  openModal(event?: MouseEvent) {
+    if (event) {
+      event.stopPropagation();
+    }
+    this.dialog.open(BlogModalComponent, { data: this.blog });
+  }
 }
