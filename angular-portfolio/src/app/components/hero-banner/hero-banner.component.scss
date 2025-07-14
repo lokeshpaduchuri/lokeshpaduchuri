@@ -1,7 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
 .hero-banner {
   text-align: center;
   padding: 6rem 1rem;
-  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
   color: var(--heading-color);
 
   &__title {

@@ -1,11 +1,15 @@
+@import 'theme';
+
 :root {
-  --primary-color: #3b82f6; /* electric blue */
-  --nav-bg: #1f1f1f; /* dark gray */
-  --nav-text: #f5f5f5; /* soft white */
-  --bg-color: #2a2a2a; /* slate */
-  --card-bg: #333; /* darker card */
-  --text-color: #f5f5f5;
-  --heading-color: #ffffff;
+  --primary-color: #{$emerald-green};
+  --primary-hover: #{$electric-green};
+  --nav-bg: #{$graphite-gray};
+  --nav-text: #{$soft-gray};
+  --bg-color: #{$charcoal-black};
+  --card-bg: #1a1a1a;
+  --border-color: #{$graphite-gray};
+  --text-color: #{$soft-gray};
+  --heading-color: #{$mint-white};
 }
 
 body {
@@ -17,15 +21,17 @@ body {
 
 body.dark {
   --nav-bg: #ffffff;
-  --nav-text: #1f1f1f;
-  --bg-color: #f5f5f5;
-  --card-bg: #e5e5e5;
-  --text-color: #1f1f1f;
-  --heading-color: #1f1f1f;
+  --nav-text: #000000;
+  --bg-color: #ffffff;
+  --card-bg: #f0f0f0;
+  --border-color: #dddddd;
+  --text-color: #000000;
+  --heading-color: #000000;
 }
 
 .card {
   background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
