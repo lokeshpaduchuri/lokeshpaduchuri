@@ -24,7 +24,7 @@ export class BlogCardComponent {
     }
     this.dialog.open(BlogModalComponent, {
       data: this.blog,
-      panelClass: 'blog-modal-panel',
+      panelClass: 'custom-dialog',
       autoFocus: false,
       maxWidth: '90vw'
     });

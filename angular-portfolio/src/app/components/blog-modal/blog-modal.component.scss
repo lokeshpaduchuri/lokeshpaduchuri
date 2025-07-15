@@ -1,6 +1,15 @@
+
 .blog-modal-container {
-  @apply bg-emerald-800 text-white rounded-xl p-6 max-w-2xl w-full outline-none;
+  @apply outline-none;
   animation: fadeInScale 0.3s ease both;
+}
+
+::ng-deep .custom-dialog .mat-dialog-container {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes fadeInScale {
