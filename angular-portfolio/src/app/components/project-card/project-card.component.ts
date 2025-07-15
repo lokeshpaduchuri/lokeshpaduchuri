@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { MatDialog } from '@angular/material/dialog';
+import { ProjectModalComponent, ProjectData } from '../project-modal/project-modal.component';
 
 @Component({
   selector: 'app-project-card',
@@ -19,7 +21,6 @@ export class ProjectCardComponent {
   @Input() description = 'Project description';
   @Input() image = 'assets/placeholder.svg';
   @Input() link = '/projects/project-1';
-  @Output() readMore = new EventEmitter<void>();
 
   imageLoaded = false;
 
@@ -29,6 +30,17 @@ export class ProjectCardComponent {
 
   onReadMore(event: Event) {
     event.preventDefault();
-    this.readMore.emit();
+    event.stopPropagation();
+    const data: ProjectData = { title: this.title, description: this.description, image: this.image };
+    this.dialog.open(ProjectModalComponent, {
+      data,
+      panelClass: 'slide-in-panel',
+      disableClose: false,
+      autoFocus: false,
+      maxWidth: '100vw',
+      height: '100vh'
+    });
   }
+
+  constructor(private dialog: MatDialog) {}
 }

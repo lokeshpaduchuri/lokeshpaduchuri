@@ -54,3 +54,33 @@ body.dark {
   border-radius: 0;
 }
 
+::ng-deep .slide-in-panel .mat-mdc-dialog-container {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+::ng-deep .slide-in-panel .mdc-dialog__surface {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  width: 100%;
+  max-width: 24rem;
+  height: 100%;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
