@@ -1,5 +1,12 @@
-<article class="blog-card">
-  <h3 class="blog-card__title">{{ title }}</h3>
-  <p class="blog-card__excerpt">{{ excerpt }}</p>
-  <a [routerLink]="link" class="blog-card__link">Read More</a>
+<article (click)="openModal()" class="blog-card group relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl">
+  <h3 class="blog-card__title">{{ blog?.title || title }}</h3>
+  <p class="blog-card__excerpt">{{ blog?.summary || blog?.excerpt || excerpt }}</p>
+  <footer class="blog-card__footer" (click)="$event.stopPropagation()">
+    <ng-container *ngIf="blog; else linkTpl">
+      <button class="blog-card__link" (click)="openModal($event)">Read More</button>
+    </ng-container>
+    <ng-template #linkTpl>
+      <a [routerLink]="link" class="blog-card__link">Read More</a>
+    </ng-template>
+  </footer>
 </article>

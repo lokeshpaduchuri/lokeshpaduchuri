@@ -2,16 +2,22 @@
   {
     "title": "Why I Love Angular",
     "excerpt": "A quick look at what makes Angular a great framework.",
+    "content": "Angular is built with scalability and structure in mind. It offers TypeScript, RxJS, and a powerful CLI...",
+    "date": "2025-07-14",
     "link": "/blog/why-angular"
   },
   {
     "title": "SCSS Tips",
     "excerpt": "Organizing your styles with BEM and variables.",
+    "content": "Using BEM makes your SCSS more modular. Combine it with design tokens and variables for maximum clarity...",
+    "date": "2025-07-12",
     "link": "/blog/scss-tips"
   },
   {
     "title": "Deploying to the Cloud",
     "excerpt": "How to get your Angular app online quickly.",
+    "content": "You can deploy Angular apps via Vercel, Netlify, Firebase Hosting, or S3. Here\u2019s a guide to each option...",
+    "date": "2025-07-10",
     "link": "/blog/deploying-cloud"
   }
 ]

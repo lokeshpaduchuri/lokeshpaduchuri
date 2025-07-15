@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
 
-interface Post {
+export interface Blog {
   title: string;
   excerpt: string;
+  content: string;
+  date: string;
   link: string;
 }
 
@@ -13,11 +15,11 @@ interface Post {
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  posts: Post[] = [];
+  blogs: Blog[] = [];
 
   constructor(private data: DataService) {}
 
   ngOnInit(): void {
-    this.data.getPosts().subscribe(p => (this.posts = p));
+    this.data.getPosts().subscribe(b => (this.blogs = b));
   }
 }

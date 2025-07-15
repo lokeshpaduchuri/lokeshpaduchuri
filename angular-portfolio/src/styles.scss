@@ -1,4 +1,8 @@
 @import 'theme';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --primary-color: #{$emerald-green};
@@ -36,3 +40,17 @@ body.dark {
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
+
+::ng-deep .custom-dialog-panel .mat-mdc-dialog-container {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+::ng-deep .custom-dialog-panel .mdc-dialog__surface {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
