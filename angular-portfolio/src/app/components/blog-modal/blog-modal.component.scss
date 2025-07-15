@@ -1,15 +1,8 @@
 
-.blog-modal-container {
-  @apply outline-none;
-  animation: fadeInScale 0.3s ease both;
-}
 
-::ng-deep .custom-dialog .mat-dialog-container {
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-  display: flex;
-  justify-content: center;
+.blog-modal-container {
+  @apply outline-none flex justify-center;
+  animation: fadeInScale 0.3s ease both;
 }
 
 @keyframes fadeInScale {
