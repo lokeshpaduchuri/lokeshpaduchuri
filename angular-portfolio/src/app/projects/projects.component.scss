@@ -14,16 +14,4 @@
 .projects-page app-project-card {
   width: 100%;
   max-width: 600px;
-  animation: slideIn 0.5s ease both;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

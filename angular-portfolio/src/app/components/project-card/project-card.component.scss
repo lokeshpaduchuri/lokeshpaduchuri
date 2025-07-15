@@ -1,51 +1,18 @@
+
 .project-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   gap: 1rem;
   max-width: 600px;
   margin: 0 auto;
-
-  &__image {
-    width: 100%;
-    border-radius: 0.25rem;
-  }
 
   &__content {
     display: flex;
     flex-direction: column;
   }
 
-  &__title {
-    color: var(--heading-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  &__description {
-    margin-bottom: 1rem;
-  }
-
-  &__link {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.2s;
-
-    &:hover {
-      color: var(--primary-hover);
-    }
-  }
-
   @media (min-width: 768px) {
     flex-direction: row;
-
-    &__image {
-      max-width: 50%;
-    }
     &__content {
       padding-left: 1rem;
     }
