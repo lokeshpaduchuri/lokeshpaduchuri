@@ -3,9 +3,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 export interface BlogData {
   title: string;
-  summary: string;
+  excerpt: string;
   content: string;
   date: string;
+  link?: string;
 }
 
 @Component({

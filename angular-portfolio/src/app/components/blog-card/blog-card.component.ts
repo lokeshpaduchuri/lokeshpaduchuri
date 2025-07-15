@@ -8,13 +8,19 @@ import { BlogModalComponent, BlogData } from '../blog-modal/blog-modal.component
   styleUrls: ['./blog-card.component.scss']
 })
 export class BlogCardComponent {
-  @Input() blog!: BlogData;
+  @Input() title = '';
+  @Input() excerpt = '';
+  @Input() link = '';
+  @Input() blog?: BlogData;
 
   constructor(private dialog: MatDialog) {}
 
   openModal(event?: MouseEvent) {
     if (event) {
       event.stopPropagation();
+    }
+    if (!this.blog) {
+      return;
     }
     this.dialog.open(BlogModalComponent, { data: this.blog });
   }
