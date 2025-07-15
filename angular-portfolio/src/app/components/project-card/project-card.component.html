@@ -1,8 +1,26 @@
-<article class="project-card" itemscope itemtype="http://schema.org/CreativeWork">
-  <img [src]="image" alt="project screenshot" class="project-card__image" />
-  <div class="project-card__content">
-    <h3 class="project-card__title" itemprop="name">{{ title }}</h3>
-    <p class="project-card__description" itemprop="description">{{ description }}</p>
-    <a [routerLink]="link" class="project-card__link">Read More</a>
+<article
+  class="project-card flex flex-col md:flex-row items-start gap-4 bg-zinc-900 text-white rounded-xl p-5 transition-all duration-300 ease-in-out hover:scale-[1.015] hover:shadow-2xl group relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500"
+  itemscope
+  itemtype="http://schema.org/CreativeWork"
+  [@fadeIn]
+>
+  <ng-container *ngIf="!imageLoaded">
+    <div class="bg-gray-700 animate-pulse w-28 h-28 rounded-md"></div>
+  </ng-container>
+  <img
+    [src]="image"
+    alt="project screenshot"
+    class="w-28 h-28 object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
+    (load)="onImageLoad()"
+    [class.hidden]="!imageLoaded"
+  />
+  <div class="project-card__content flex flex-col">
+    <h3 class="project-card__title text-lg font-semibold mb-2" itemprop="name">
+      {{ title }}
+    </h3>
+    <p class="project-card__description text-sm mb-3" itemprop="description">
+      {{ description }}
+    </p>
+    <a href="#" (click)="onReadMore($event)" class="project-card__link text-green-400 hover:underline">Read More</a>
   </div>
 </article>
