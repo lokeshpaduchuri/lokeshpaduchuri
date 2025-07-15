@@ -1,5 +1,5 @@
 <article
-  class="project-card flex flex-col md:flex-row items-start gap-4 bg-zinc-900 text-white rounded-xl p-5 transition-all duration-300 ease-in-out hover:scale-[1.015] hover:shadow-2xl group relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500"
+  class="project-card flex flex-col md:flex-row items-start gap-4 bg-zinc-900 text-white rounded-xl p-5 transition-all duration-300 ease-in-out hover:scale-[1.015] hover:shadow-2xl group relative before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 before:pointer-events-none"
   itemscope
   itemtype="http://schema.org/CreativeWork"
   [@fadeIn]
@@ -21,7 +21,7 @@
     <p class="project-card__description text-sm mb-3" itemprop="description">
       {{ description }}
     </p>
-    <a href="#" (click)="onReadMore($event)" class="project-card__link text-green-400 hover:underline">Read More</a>
+    <button type="button" (click)="onReadMore($event)" class="project-card__link text-green-400 hover:underline">Read More</button>
   </div>
 </article>
 

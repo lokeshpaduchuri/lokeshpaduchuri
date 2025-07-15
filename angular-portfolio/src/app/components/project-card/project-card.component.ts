@@ -30,6 +30,7 @@ export class ProjectCardComponent {
 
   onReadMore(event: Event) {
     event.preventDefault();
+    event.stopPropagation();
     this.showDetails = true;
   }
 
