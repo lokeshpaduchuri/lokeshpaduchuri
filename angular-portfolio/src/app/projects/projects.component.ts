@@ -17,10 +17,19 @@ interface Project {
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
+  selectedProject: Project | null = null;
 
   constructor(private data: DataService) {}
 
   ngOnInit(): void {
     this.data.getProjects().subscribe(p => (this.projects = p));
+  }
+
+  openSlideIn(project: Project) {
+    this.selectedProject = project;
+  }
+
+  closePanel() {
+    this.selectedProject = null;
   }
 }

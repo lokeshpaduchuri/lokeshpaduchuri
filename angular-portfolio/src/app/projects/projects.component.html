@@ -8,5 +8,8 @@
     [link]="p.link"
     [techStack]="p.techStack"
     [liveLink]="p.liveLink"
+    [selected]="selectedProject === p"
+    (readMore)="openSlideIn(p)"
+    (close)="closePanel()"
   ></app-project-card>
 </section>

@@ -11,6 +11,9 @@
       [link]="project?.link"
       [techStack]="project?.techStack"
       [liveLink]="project?.liveLink"
+      [selected]="selectedProject === project"
+      (readMore)="openSlideIn(project)"
+      (close)="closePanel()"
     ></app-project-card>
     <a routerLink="/projects" class="home__link">View All Projects</a>
   </section>

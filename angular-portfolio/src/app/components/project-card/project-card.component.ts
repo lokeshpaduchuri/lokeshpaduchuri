@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -22,8 +22,13 @@ export class ProjectCardComponent {
   @Input() techStack?: string[];
   @Input() liveLink?: string;
 
-  panelOpen = false;
-  panelVisible = false;
+  /** True when this card's slide-in panel should be visible */
+  @Input() selected = false;
+
+  /** Notify parent when user requests to open the panel */
+  @Output() readMore = new EventEmitter<void>();
+  /** Notify parent when the slide-in panel should close */
+  @Output() close = new EventEmitter<void>();
 
   imageLoaded = false;
 
@@ -33,12 +38,11 @@ export class ProjectCardComponent {
 
   onReadMore(event: Event) {
     event.preventDefault();
-    this.panelOpen = true;
-    setTimeout(() => (this.panelVisible = true));
+    this.readMore.emit();
   }
 
-  closePanel() {
-    this.panelVisible = false;
-    setTimeout(() => (this.panelOpen = false), 300);
+  onClose(event: Event) {
+    event.stopPropagation();
+    this.close.emit();
   }
 }
