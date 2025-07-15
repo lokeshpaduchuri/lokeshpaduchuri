@@ -19,6 +19,7 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "sourceMap": true,
             "assets": ["src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []

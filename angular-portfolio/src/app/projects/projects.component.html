@@ -12,7 +12,7 @@
     <div
       *ngIf="selectedProject === p"
       class="absolute top-0 right-0 h-full w-full max-w-md bg-zinc-900 text-white rounded-xl z-30 transform transition-transform duration-300 ease-in-out translate-x-full"
-      [ngClass]="{ 'translate-x-0': selectedProject === p }"
+      [class.translate-x-0]="panelVisible"
     >
       <button class="absolute top-4 right-4 text-xl" (click)="closePanel()" aria-label="Close panel">✕</button>
       <div class="p-6 space-y-4 overflow-y-auto h-full">

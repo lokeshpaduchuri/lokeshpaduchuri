@@ -18,6 +18,7 @@ interface Project {
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
   selectedProject: Project | null = null;
+  panelVisible = false;
 
   constructor(private data: DataService) {}
 
@@ -26,10 +27,15 @@ export class ProjectsComponent implements OnInit {
   }
 
   openSlideIn(project: Project) {
+    this.panelVisible = false;
     this.selectedProject = project;
+    // allow panel to render off-screen before sliding in
+    setTimeout(() => (this.panelVisible = true));
   }
 
   closePanel() {
-    this.selectedProject = null;
+    this.panelVisible = false;
+    // wait for animation to finish before removing element
+    setTimeout(() => (this.selectedProject = null), 300);
   }
 }
