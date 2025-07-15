@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BlogModalComponent, BlogData } from '../blog-modal/blog-modal.component';
 
@@ -12,6 +12,7 @@ export class BlogCardComponent {
   @Input() excerpt = '';
   @Input() link = '';
   @Input() blog?: BlogData;
+  @Output() readMore = new EventEmitter<void>();
 
   constructor(private dialog: MatDialog) {}
 
@@ -29,5 +30,21 @@ export class BlogCardComponent {
       autoFocus: false,
       maxWidth: '90vw'
     });
+  }
+
+  onCardClick() {
+    if (this.readMore.observers.length) {
+      return;
+    }
+    this.openModal();
+  }
+
+  onReadMore(event: MouseEvent) {
+    event.stopPropagation();
+    if (this.readMore.observers.length) {
+      this.readMore.emit();
+    } else {
+      this.openModal();
+    }
   }
 }

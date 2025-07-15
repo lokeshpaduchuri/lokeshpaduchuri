@@ -8,9 +8,11 @@ interface Project {
   link: string;
 }
 
-interface Post {
+interface Blog {
   title: string;
   excerpt: string;
+  content: string;
+  date: string;
   link: string;
 }
 
@@ -21,12 +23,30 @@ interface Post {
 })
 export class HomeComponent implements OnInit {
   project?: Project;
-  post?: Post;
+  blog?: Blog;
+  selectedProject: Project | null = null;
+  selectedBlog: Blog | null = null;
 
   constructor(private data: DataService) {}
 
   ngOnInit(): void {
     this.data.getProjects().subscribe(p => (this.project = p[0]));
-    this.data.getPosts().subscribe(b => (this.post = b[0]));
+    this.data.getPosts().subscribe(b => (this.blog = b[0]));
+  }
+
+  openSlideIn(project: Project) {
+    this.selectedProject = project;
+  }
+
+  closePanel() {
+    this.selectedProject = null;
+  }
+
+  openBlogSlide(blog: Blog) {
+    this.selectedBlog = blog;
+  }
+
+  closeBlogSlide() {
+    this.selectedBlog = null;
   }
 }
