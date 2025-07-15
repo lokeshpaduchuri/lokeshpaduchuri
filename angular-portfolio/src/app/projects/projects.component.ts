@@ -6,6 +6,8 @@ interface Project {
   description: string;
   image: string;
   link: string;
+  techStack?: string[];
+  liveLink?: string;
 }
 
 @Component({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/data.service';
+import { BlogData } from '../components/blog-modal/blog-modal.component';
 
 interface Project {
   title: string;
@@ -8,11 +9,7 @@ interface Project {
   link: string;
 }
 
-interface Post {
-  title: string;
-  excerpt: string;
-  link: string;
-}
+type Post = BlogData;
 
 @Component({
   selector: 'app-home',

@@ -3,18 +3,24 @@
     "title": "My Web App",
     "description": "A modern web application built with Angular.",
     "image": "assets/placeholder.svg",
-    "link": "/projects/my-web-app"
+    "link": "/projects/my-web-app",
+    "techStack": ["Angular", "Tailwind", "TypeScript"],
+    "liveLink": "https://example.com/my-web-app"
   },
   {
     "title": "Portfolio Site",
     "description": "Personal branding website built with SCSS styling.",
     "image": "assets/placeholder.svg",
-    "link": "/projects/portfolio-site"
+    "link": "/projects/portfolio-site",
+    "techStack": ["SCSS", "HTML", "JavaScript"],
+    "liveLink": "https://example.com/portfolio"
   },
   {
     "title": "E-commerce Platform",
     "description": "Full-featured online store with payment integration.",
     "image": "assets/placeholder.svg",
-    "link": "/projects/e-commerce"
+    "link": "/projects/e-commerce",
+    "techStack": ["Angular", "Stripe", "Firebase"],
+    "liveLink": "https://example.com/store"
   }
 ]
