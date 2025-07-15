@@ -1,35 +1,12 @@
 <section class="projects-page">
   <h2 class="projects-page__title">Projects</h2>
-  <div *ngFor="let p of projects" class="relative">
-    <app-project-card
-      [title]="p.title"
-      [description]="p.description"
-      [image]="p.image"
-      [link]="p.link"
-      (readMore)="openSlideIn(p)"
-    ></app-project-card>
-
-    <div
-      *ngIf="selectedProject === p"
-      class="absolute top-0 right-0 h-full w-full max-w-md bg-zinc-900 text-white rounded-xl z-30 transform transition-transform duration-300 ease-in-out translate-x-full"
-      [class.translate-x-0]="panelVisible"
-    >
-      <button class="absolute top-4 right-4 text-xl" (click)="closePanel()" aria-label="Close panel">✕</button>
-      <div class="p-6 space-y-4 overflow-y-auto h-full">
-        <h3 class="text-2xl font-semibold">{{ p.title }}</h3>
-        <img *ngIf="p.image" [src]="p.image" alt="{{ p.title }}" class="w-full h-48 object-cover rounded-md" />
-        <p>{{ p.description }}</p>
-        <ul *ngIf="p.techStack" class="list-disc list-inside space-y-1">
-          <li *ngFor="let tech of p.techStack">{{ tech }}</li>
-        </ul>
-        <a
-          *ngIf="p.liveLink"
-          [href]="p.liveLink"
-          target="_blank"
-          class="inline-block bg-green-600 text-black px-4 py-2 rounded hover:bg-green-500 transition"
-          >Live Demo</a
-        >
-      </div>
-    </div>
-  </div>
+  <app-project-card
+    *ngFor="let p of projects"
+    [title]="p.title"
+    [description]="p.description"
+    [image]="p.image"
+    [link]="p.link"
+    [techStack]="p.techStack"
+    [liveLink]="p.liveLink"
+  ></app-project-card>
 </section>

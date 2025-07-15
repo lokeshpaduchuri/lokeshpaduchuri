@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -19,7 +19,11 @@ export class ProjectCardComponent {
   @Input() description = 'Project description';
   @Input() image = 'assets/placeholder.svg';
   @Input() link = '/projects/project-1';
-  @Output() readMore = new EventEmitter<void>();
+  @Input() techStack?: string[];
+  @Input() liveLink?: string;
+
+  panelOpen = false;
+  panelVisible = false;
 
   imageLoaded = false;
 
@@ -29,6 +33,12 @@ export class ProjectCardComponent {
 
   onReadMore(event: Event) {
     event.preventDefault();
-    this.readMore.emit();
+    this.panelOpen = true;
+    setTimeout(() => (this.panelVisible = true));
+  }
+
+  closePanel() {
+    this.panelVisible = false;
+    setTimeout(() => (this.panelOpen = false), 300);
   }
 }
