@@ -22,6 +22,11 @@ export class BlogCardComponent {
     if (!this.blog) {
       return;
     }
-    this.dialog.open(BlogModalComponent, { data: this.blog });
+    this.dialog.open(BlogModalComponent, {
+      data: this.blog,
+      panelClass: 'blog-modal-panel',
+      autoFocus: false,
+      maxWidth: '90vw'
+    });
   }
 }

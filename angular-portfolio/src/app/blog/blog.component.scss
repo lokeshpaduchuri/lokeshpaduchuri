@@ -1,8 +1,4 @@
 .blog-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
   padding: 2rem 1rem;
 }
 
@@ -11,9 +7,11 @@
   margin-bottom: 1rem;
 }
 
-.blog-page app-blog-card {
-  width: 100%;
-  max-width: 600px;
+.blog-grid {
+  @apply grid gap-8 md:grid-cols-2;
+}
+
+.blog-grid app-blog-card {
   animation: slideIn 0.5s ease both;
 }
 

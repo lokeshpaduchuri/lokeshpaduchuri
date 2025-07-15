@@ -11,7 +11,8 @@ export interface BlogData {
 
 @Component({
   selector: 'app-blog-modal',
-  templateUrl: './blog-modal.component.html'
+  templateUrl: './blog-modal.component.html',
+  styleUrls: ['./blog-modal.component.scss']
 })
 export class BlogModalComponent {
   constructor(
