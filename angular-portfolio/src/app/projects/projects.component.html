@@ -6,34 +6,5 @@
     [description]="p.description"
     [image]="p.image"
     [link]="p.link"
-    (readMore)="openSlideIn(p)"
   ></app-project-card>
 </section>
-
-<div
-  class="fixed inset-0 bg-black/70 z-40"
-  *ngIf="selectedProject"
-  (click)="closePanel()"
-></div>
-<aside
-  *ngIf="selectedProject"
-  class="fixed top-0 right-0 h-full w-full max-w-lg bg-zinc-900 text-white z-50 shadow-xl transform transition-transform duration-300 ease-in-out"
-  [ngClass]="{ 'translate-x-0': selectedProject, 'translate-x-full': !selectedProject }"
->
-  <button class="absolute top-4 right-4 text-xl" (click)="closePanel()" aria-label="Close panel">✕</button>
-  <div class="p-6 space-y-4 overflow-y-auto h-full">
-    <h3 class="text-2xl font-semibold">{{ selectedProject?.title }}</h3>
-    <img [src]="selectedProject?.image" alt="{{ selectedProject?.title }}" class="w-full h-48 object-cover rounded-md" />
-    <p>{{ selectedProject?.description }}</p>
-    <ul *ngIf="selectedProject?.techStack" class="list-disc list-inside space-y-1">
-      <li *ngFor="let tech of selectedProject?.techStack">{{ tech }}</li>
-    </ul>
-    <a
-      *ngIf="selectedProject?.demo"
-      [href]="selectedProject?.demo"
-      target="_blank"
-      class="inline-block bg-green-600 text-black px-4 py-2 rounded hover:bg-green-500 transition"
-      >Live Demo</a
-    >
-  </div>
-</aside>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -19,7 +19,8 @@ export class ProjectCardComponent {
   @Input() description = 'Project description';
   @Input() image = 'assets/placeholder.svg';
   @Input() link = '/projects/project-1';
-  @Output() readMore = new EventEmitter<void>();
+
+  showDetails = false;
 
   imageLoaded = false;
 
@@ -29,6 +30,11 @@ export class ProjectCardComponent {
 
   onReadMore(event: Event) {
     event.preventDefault();
-    this.readMore.emit();
+    event.stopPropagation();
+    this.showDetails = true;
+  }
+
+  closeDetails() {
+    this.showDetails = false;
   }
 }
