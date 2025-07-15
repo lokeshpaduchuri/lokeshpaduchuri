@@ -1,12 +1,10 @@
 <section class="blog-page">
   <h2 class="blog-page__title">Blog</h2>
-  <div class="blog-grid">
-    <app-blog-card
-      *ngFor="let blog of blogs"
-      [blog]="blog"
-      [title]="blog.title"
-      [excerpt]="blog.excerpt"
-      [link]="blog.link"
-    ></app-blog-card>
-  </div>
+  <app-blog-card
+    *ngFor="let blog of blogs"
+    [blog]="blog"
+    [title]="blog.title"
+    [excerpt]="blog.excerpt"
+    [link]="blog.link"
+  ></app-blog-card>
 </section>
