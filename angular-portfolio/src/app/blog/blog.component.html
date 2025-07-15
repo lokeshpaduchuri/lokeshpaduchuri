@@ -1,9 +1,6 @@
 <section class="blog-page">
   <h2 class="blog-page__title">Blog</h2>
-  <app-blog-card
-    *ngFor="let b of posts"
-    [title]="b.title"
-    [excerpt]="b.excerpt"
-    [link]="b.link"
-  ></app-blog-card>
+  <div class="grid gap-6 md:grid-cols-2">
+    <app-blog-card *ngFor="let blog of blogs" [blog]="blog"></app-blog-card>
+  </div>
 </section>

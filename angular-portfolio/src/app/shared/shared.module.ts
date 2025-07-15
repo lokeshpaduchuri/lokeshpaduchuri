@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { HeroBannerComponent } from '../components/hero-banner/hero-banner.component';
 import { TechStackComponent } from '../components/tech-stack/tech-stack.component';
@@ -22,7 +23,7 @@ import { NavbarComponent } from '../layout/navbar/navbar.component';
     ThemeToggleComponent,
     NavbarComponent
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatDialogModule],
   exports: [
     HeroBannerComponent,
     TechStackComponent,
@@ -33,6 +34,7 @@ import { NavbarComponent } from '../layout/navbar/navbar.component';
     ThemeToggleComponent,
     NavbarComponent,
     RouterModule,
+    MatDialogModule,
   ]
 })
 export class SharedModule {}
