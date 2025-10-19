@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { MatDialog } from '@angular/material/dialog';
+import { ProjectModalComponent, ProjectData } from '../project-modal/project-modal.component';
 
 @Component({
   selector: 'app-project-card',
@@ -20,8 +22,6 @@ export class ProjectCardComponent {
   @Input() image = 'assets/placeholder.svg';
   @Input() link = '/projects/project-1';
 
-  showDetails = false;
-
   imageLoaded = false;
 
   onImageLoad() {
@@ -31,10 +31,16 @@ export class ProjectCardComponent {
   onReadMore(event: Event) {
     event.preventDefault();
     event.stopPropagation();
-    this.showDetails = true;
+    const data: ProjectData = { title: this.title, description: this.description, image: this.image };
+    this.dialog.open(ProjectModalComponent, {
+      data,
+      panelClass: 'slide-in-panel',
+      disableClose: false,
+      autoFocus: false,
+      maxWidth: '100vw',
+      height: '100vh'
+    });
   }
 
-  closeDetails() {
-    this.showDetails = false;
-  }
+  constructor(private dialog: MatDialog) {}
 }
